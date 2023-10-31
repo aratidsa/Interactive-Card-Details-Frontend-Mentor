@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://github.com/aratidsa/Interactive-Card-Details-Frontend-Mentor
 - Live Site URL: 
 
 ## My process
