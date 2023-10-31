@@ -1,0 +1,554 @@
+/* ---------------------  RESET ----------------------- */
+
+html,body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,button
+{
+    font: inherit;
+}
+
+h1,p
+{
+    margin:0;
+}
+
+ /* For WebKit-based browsers */
+ input[type="number"]::-webkit-inner-spin-button,
+ input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+ }
+
+/* -------------------- Custom Properties ------------------- */
+
+:root{
+
+    /* --------font-family-------- */
+    --ff-sans-serif:'Space Grotesk', sans-serif;
+
+    /* --------font-sizes-------- */
+    --fs-18:1.13rem;
+
+    /* --------font-color------- */
+    --clr-darkGrayishViolet:279, 6%, 55%;   
+    --clr-lightGrayishViolet:270, 3%, 87%;
+    --clr-white:0, 0%, 100%; 
+    --clr-red:0, 100%, 66%; 
+    --clr-linear-gradient:249, 99%, 64%;
+    --clr-linear-gradient1:278, 94%, 30%;
+    --clr-veryDarkViolet:278, 68%, 11%;
+
+    /* --------font-weight------- */
+    --fw-500:500;
+}
+
+/* ---------------set up the body------------- */
+body{
+    font-family: var(--ff-sans-serif);
+    background-color:hsl(var(--clr-white)) ;
+    color:hsl(var(--clr-veryDarkViolet));
+    line-height: 1.5;
+    font-weight: var(--fw-500);
+    font-size: var(--fs-18);
+    position:relative;
+}
+
+/* -------------- Typography --------------- */
+
+/* Typography - font-family */
+.ff-sans-serif{ font-family:var(--ff-sans-serif);}
+
+/* Typography - font-size */
+.fs-18{ font-size: var(--fs-18);}
+
+/* Typography - background color */
+.bg-white{ background-color:hsl(var(--clr-white));}
+.bg-linear-gradient{ background-image:linear-gradient(to bottom right,hsl(var(--clr-linear-gradient)),hsl(var(--clr-linear-gradient1)));}
+
+/* Typography - text color */
+.text-white{ color:hsl(var(--clr-white));}
+.text-veryDarkViolet{ color:hsl(var(--clr-veryDarkViolet));}
+
+
+/* Typography - letter-spacing */
+.letter-spacing { letter-spacing: 0.10rem; }
+.letter-spacing1 { letter-spacing: 0.19rem; }
+
+/* Typography - uppercase */
+.upper-case{ text-transform:uppercase ;}
+
+/* Components */
+
+/* Container Styles */
+.container
+{
+   background-color: hsl(var(--clr-white));
+   position:relative;
+}
+
+/* Left Container */
+.left-container
+{  width:30%;   
+   height:46.13rem;
+   background: url("bg-main-desktop.png") no-repeat fixed;
+   background-size: cover;
+   position:relative;
+}
+
+/* Logo of the card */
+.logo-card
+{
+   position:absolute;
+   width:4.38rem;
+   height:2.38rem;
+   top:12.5rem;
+   left:14.38rem;
+   z-index:1;
+}
+
+/* Front of the card */
+.front-card
+{
+   position:absolute; 
+   width:22.5rem;
+   top:11.25rem;
+   left:12.5rem;
+   z-index:0;
+}
+
+/* Placeholder */
+::placeholder
+{
+    color:hsl(var(--clr-lightGrayishViolet));   
+}
+
+/* Card Number */
+.card-number-txt
+{
+  top:17.81rem;
+  color:hsl(var(--clr-white));
+  position: absolute;
+  left:14.06rem;
+  font-size:1.38rem;
+  width:18.13rem;
+}
+
+/* Card Name */
+.card-name-txt
+{
+  color:hsl(var(--clr-white));
+  font-size:0.81rem;
+  position: absolute;
+  top:21.25rem;
+  font-size:0.69rem;
+  left:14.06rem;
+}
+
+/* Card Date (MM/YY) */
+.card-date
+{
+    color:hsl(var(--clr-white));
+    font-size:0.69rem;
+    position: absolute;
+    top:21.25rem;
+    left:30.63rem;
+}
+
+/* Back of the card */
+.back-card
+{
+   position:absolute;
+   top:25.31rem;
+   width:22.5rem;
+   left:17.5rem;
+}
+
+/* CVC Number */
+.cvc-number
+{
+    color:hsl(var(--clr-white));
+    font-size:0.81rem;
+    position: absolute;
+    top:30.81rem;
+    font-size:0.69rem;
+    left:35.63rem;
+}
+
+/* Right Container */
+.right-container
+{
+   color:hsl(var(--clr-veryDarkViolet));
+   width:45%;
+   position:absolute; 
+   top:15rem;
+   left:50rem;
+ 
+}
+
+/* Label */
+label
+{
+    font-size: 0.56rem; 
+}
+
+.name-cvc
+{
+    margin-left:4.69rem;
+}
+
+/* Input field */
+input
+{
+    margin-bottom:0.81rem;
+    height:0.63rem;
+    border-radius:0.44rem;
+    outline: none !important;
+    border: 1px solid hsl(var(--clr-lightGrayishViolet));
+    padding:0.81rem 0.75rem;
+    font-size:0.94rem;
+}
+
+input:focus{
+    border:1px solid hsl(var(--clr-veryDarkViolet));
+    outline: none;
+}
+
+/* Card Name & Number */
+.cardHolder-name,.card-number
+{
+   width:20.63rem;
+}
+
+/* Month Year */
+.month
+{
+    width:3.44rem;       
+}
+
+.year
+{
+    width:3.44rem;
+    margin-left:0.31rem;
+}
+
+/* CVC Number */
+.cvc
+{
+    width:9.38rem;
+    margin-left:0.63rem;
+}
+
+.date-cvc-details
+{
+    margin-bottom:-0.63rem;
+}
+
+/* Buttons Confirm/Continue */
+.confirm-btn,.continue-btn
+{
+    width:22.19rem;  
+    height:2.81rem;
+    border-radius:0.44rem;
+    font-size:0.94rem;
+    border:none;
+    text-align: center;
+    background-color:hsl(var(--clr-veryDarkViolet)) ;
+    color:hsl(var(--clr-white));
+    cursor:pointer;
+} 
+
+.confirm-btn
+{
+    margin-top:1.25rem;
+} 
+
+.continue-btn
+{
+    margin-top:2.5rem;  
+}
+
+
+/* Error Messages */
+.error-msg
+{
+    font-size:0.56rem;
+    color:hsl(var(--clr-red));   
+    white-space: nowrap;
+}
+
+/* Error Name/Number/Date/CVC */
+.error-blank-name,.error-number,.error-blank-number
+{
+   margin-top:-0.5rem;
+   margin-bottom:0.63rem;
+   display: none;
+}
+
+.error-blank-date
+{
+    margin-bottom:0.63rem;
+    display: none;
+}
+
+.error-blank-cvc
+{
+    margin-left:11.75rem;
+    margin-top:-1.44rem; 
+    display:none;
+}
+
+.error-cvc
+{
+    margin-left:12rem;
+    margin-top:-1.44rem;
+    display:none;
+} 
+
+/* Complete Icon */
+.complete-icon
+{
+    width:4.38rem;
+    height:4.38rem;   
+    margin-left:8.75rem;
+}
+
+/* Thank You Message */
+.thankyou-msg
+{
+   display:none;
+   margin-top:1.25rem;
+}
+
+.thankyou-words
+{
+    font-size:1.38rem;
+    margin-top:1.88rem;
+    margin-left:6.88rem;
+}
+
+.msg
+{
+    font-size:0.94rem;
+    margin-top:0.63rem;
+    margin-left:4.38rem;
+    color:hsl(var(--clr-darkGrayishViolet));
+}
+
+
+@media screen and (max-width:1200px) {
+.container
+{
+   background-color: hsl(var(--clr-white));
+   position:relative;
+}
+
+/* Left Container */
+.left-container
+{  width:25rem;   
+   background: url("bg-main-mobile.png") no-repeat;
+   background-size: cover;
+   height:15rem;
+   }
+
+/* Back of the card */
+.back-card
+{
+   position:absolute;
+   top:1.88rem;
+   width:17.5rem;
+   left:4.69rem;
+   z-index:0;
+   height:10rem;
+ }
+
+/* CVC Number */
+.cvc-number
+{
+    top:6.25rem;
+    left:18.38rem;    
+}
+
+/* Front of the card */
+.front-card
+{  
+   width:17.5rem;
+   top:7.5rem;
+   left:0.94rem;
+   z-index:1;
+   height:10rem;
+}
+
+
+/* Logo of the card */
+.logo-card
+{
+   top:9.38rem;
+   left:2.5rem;
+   z-index:2;
+   width:3.13rem;
+   height:1.75rem;
+}
+
+/* Card Number */
+.card-number-txt
+{
+  top:13.13rem;
+  left:2.5rem;
+  width:20rem;
+  z-index:2;
+  font-size:1.13rem;
+}
+
+/* Card Name */
+.card-name-txt
+{
+  top:15.63rem;
+  left:2.69rem;
+  z-index:2;
+  font-size:0.56rem;
+}
+
+/* Card Date (MM/YY) */
+.card-date
+{
+    top:16.25rem;
+    left:15.63rem;
+    z-index:2;
+    font-size:0.56rem;
+}
+
+/* Right Container */
+.right-container
+{
+   width:100%;
+   top:20.31rem;
+   left:1.25rem;     
+}
+
+/* Label */
+label
+{
+    font-size: 0.69rem; 
+    font-weight: 500;
+}
+
+.name-cvc
+{
+    margin-left:1.88rem;
+}
+
+/* Input field */
+input
+{
+    height:0.81rem;
+}
+
+/* Card Name & Number */
+.cardHolder-name,.card-number
+{
+   width:18.75rem;
+   margin-bottom:0.31rem;
+}
+
+/* Month Year */
+.month
+{
+    width:2.81rem;       
+}
+
+.year
+{
+    width:2.81rem;
+    margin-left:0.19rem;
+}
+
+/* CVC Number */
+.cvc
+{
+    width:8.75rem;
+    margin-left:0.31rem;
+}
+
+/* Buttons Confirm/Continue */
+.confirm-btn
+{
+    width:20.19rem;  
+    height:3rem;
+} 
+
+.continue-btn
+{
+    width:20.63rem;  
+    height:3rem;
+} 
+
+.confirm-btn
+{
+    margin-top:1.25rem;
+} 
+.continue-btn
+{
+    margin-top:2.5rem;  
+}
+
+/* Error Name/Number/Date/CVC */
+.error-blank-name,.error-number,.error-blank-number
+{
+   margin-top:-1px;
+}
+
+.error-blank-cvc
+{  
+    margin-left:10.19rem;
+    
+}
+
+.error-cvc
+{
+    margin-left:10.13rem;
+    display:none;
+} 
+
+
+/* Complete Icon */
+.complete-icon
+{
+    width:4.38rem;
+    height:4.38rem;   
+    margin-left:7.81rem;
+    margin-top:-0.63rem;
+}
+
+/* Thank You Message */
+.thankyou-msg
+{
+   display:none;
+   margin-top:1.25rem;
+  }
+
+.thankyou-words
+{
+    font-size:1.56rem;
+    margin-top:1.88rem;
+    margin-left:5.63rem;
+}
+
+.msg
+{
+    font-size:0.94rem;
+    margin-top:0.63rem;
+    margin-left:3.75rem;
+    color:hsl(var(--clr-darkGrayishViolet));
+  }
+    
+}
