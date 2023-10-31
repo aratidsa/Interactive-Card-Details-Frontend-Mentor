@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/aratidsa/Interactive-Card-Details-Frontend-Mentor
-- Live Site URL: 
+- Live Site URL: https://interactive-card-details-design.netlify.app/
 
 ## My process
 
